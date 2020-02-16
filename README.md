@@ -13,26 +13,23 @@ python get_pdf_row_features.py
 
 Specifically, the generated row features are saved in a dataframe format, with columns of:
 - row: row id, 
-top: row top position y1 (starting from top of the page),
-bottom: row bottom position y2 (starting from top of the page)
-to_pre: distance to previous row
-to_next: distance to next row
-row_ele: number of words in the row
-row_min: minimum string length of a word in the row
-row_max: maximum string length of a word in the row
-match_pre: number of words which are aligned with words in the previous row (have same x coordinates)
-match_next: number of words which are aligned with words in the next row (have same x coordinates)
-top_to_line: 1 or 0, indicate if the top of the row is close to a line on the page 
-bottom_to_line: 1 or 0, indicate if the bottom of the row is close to a line on the page 
-spaceratio: ratio of total empty space length to the row width
-(if have 'gt.csv') label: 1 or 0, indicate if the row is inside a table area or not, based on groundtruth csv. 
+- top: row top position y1 (starting from top of the page),
+- bottom: row bottom position y2 (starting from top of the page)
+- to_pre: distance to previous row
+- to_next: distance to next row
+- row_ele: number of words in the row
+- row_min: minimum string length of a word in the row
+- row_max: maximum string length of a word in the row
+- match_pre: number of words which are aligned with words in the previous row (have same x coordinates)
+- match_next: number of words which are aligned with words in the next row (have same x coordinates)
+- top_to_line: 1 or 0, indicate if the top of the row is close to a line on the page 
+- bottom_to_line: 1 or 0, indicate if the bottom of the row is close to a line on the page 
+- spaceratio: ratio of total empty space length to the row width
+- (if have 'gt.csv') label: 1 or 0, indicate if the row is inside a table area or not, based on groundtruth csv. 
 
 For example, to classify if if a row is inside a table area or not , just do:
-
-X = output[pdffilename].iloc[:, 1:-1] # all features
-
-y = output[pdffilename].iloc[:, -1] # target
-
+- X = output[pdffilename].iloc[:, 1:-1] # all features
+- y = output[pdffilename].iloc[:, -1] # target
 then build any classification model to train. 
 
 
