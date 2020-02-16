@@ -5,14 +5,14 @@ The script is used to generate features of each row in a PDF page.
 PDF files should be saved in the './data/docs' folder. 
 
 For one example, the row features can be used to train a classification model to detect if the row is inside a table or not, which helps recognize table areas in a PDF. To do so, a ground truth csv need to be prepared first and saved as './data/gt.csv'. The columns include:  
-filename, region_id, table_id, page_n, x1, y1, x2, y2, cor_x1, cor_y1, cor_x2, cor_y2
+- filename, region_id, table_id, page_n, x1, y1, x2, y2, cor_x1, cor_y1, cor_x2, cor_y2
 
 To generate row features, just run: 
 python get_pdf_row_features.py
 
 
 Specifically, the generated row features are saved in a dataframe format, with columns of:
-row: row id, 
+- row: row id, 
 top: row top position y1 (starting from top of the page),
 bottom: row bottom position y2 (starting from top of the page)
 to_pre: distance to previous row
