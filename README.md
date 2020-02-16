@@ -8,7 +8,7 @@ For one example, the row features can be used to train a classification model to
 - filename, region_id, table_id, page_n, x1, y1, x2, y2, cor_x1, cor_y1, cor_x2, cor_y2
 
 To generate row features, just run: 
-python get_pdf_row_features.py
+- python get_pdf_row_features.py
 
 
 Specifically, the generated row features are saved in a dataframe format, with columns of:
