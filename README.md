@@ -33,6 +33,7 @@ Specifically, the generated row features are saved in a dataframe format, with c
 For example, to classify if if a row is inside a table area or not , just do:
 - X = output[pdffilename].iloc[:, 1:-1] # all features
 - y = output[pdffilename].iloc[:, -1] # target
+
 then build any classification model to train. 
 
 
